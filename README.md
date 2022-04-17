@@ -28,9 +28,9 @@ Bear@bear.ca   password: Nina_890
 ![table_CoachInfo](https://user-images.githubusercontent.com/82427284/163698654-fa2b35cd-1d1f-459b-9c11-b99d64012720.png) 
 ![table_MembershipInfo](https://user-images.githubusercontent.com/82427284/163698656-244a8a96-a9ed-4535-a682-aae3c015ebe8.png)
 ![table_ProgramInfo](https://user-images.githubusercontent.com/82427284/163698657-3ca60cf4-3c8e-4848-ae22-2e17ffe24eee.png)
-![table_ScheduleManagement](https://user-images.githubusercontent.com/82427284/163698658-0d99cc1c-bf1f-4979-a528-695a8167e78d.png)
-![table_Subscription](https://user-images.githubusercontent.com/82427284/163698659-2cfc810d-efef-42ec-b050-47a0a88f5312.png)
 
+![TableClientBooking](https://user-images.githubusercontent.com/82427284/163724960-cd1612b7-7cde-4e18-94a4-09b223fb255d.png)
+![table_ScheduleManagement](https://user-images.githubusercontent.com/82427284/163698658-0d99cc1c-bf1f-4979-a528-695a8167e78d.png)
 
 ![Home Page](https://user-images.githubusercontent.com/82427284/163724664-019baf1d-d248-4d98-9dd9-e8d038dc9e12.png)
 ![About Us page](https://user-images.githubusercontent.com/82427284/163724660-f301c0bf-ffef-47e1-a5aa-77139c067c49.png)
