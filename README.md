@@ -1,15 +1,16 @@
 # COMP2084ProjectNinaLiu200479031
+# Topic Fitness website
 # Created 2 Roles: Administrator, Client
 # Anonymous users can view Home, About Us, Coach,  Program page 
 # Login Users can reach Create membership function to apply membership in Membership Controller, but can not Edit or Delete.
 
 # Forced authentication & authorization, Roles= Administrator to Roles controller, because only Administrator are allowed to view and edit/delete roles. 
-#  Therefore, I hide the Roles Page Link from all non Administrator users in _Layout.cshtml
+  Therefore, I hide the Roles Page Link from all non Administrator users in _Layout.cshtml
 
 # Both Client users and Administrator users can reach membership/ClientBooking/ScheduleManagements controllers Index/Create method. Only Administrator users can reach Edit and Delete method to avoid Client users Edit other clients data.
 
 #  Administrator users have the only authorization to create and edit/delete method in Coaches/Programs controller.
-#  Therefore, hide Create/Edit/Delete Links in Both Index.cshtml of Coaches/Programs View to non Administrator users.
+   Therefore, hide Create/Edit/Delete Links in Both Index.cshtml of Coaches/Programs View to non Administrator users.
   
  
 # Administrator User Account:
