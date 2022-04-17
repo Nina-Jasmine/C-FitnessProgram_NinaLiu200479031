@@ -1,9 +1,12 @@
 # COMP2084ProjectNinaLiu200479031
 Anonymous users can view Home, About Us, Coach,  Program page, and Create membership to apply membership.
 
-Forced authentication & authorization, Roles= Administrator to Roles controller, because only Administrator are allowed to view and edit/delete roles.
+Forced authentication & authorization, Roles= Administrator to Roles controller, because only Administrator are allowed to view and edit/delete roles. 
+Therefore, I hide the Roles Page Link from non Administrator users in _Layout.cshtml
 
   Administrator users have the only authorization to create and edit/delete method in Coaches/Programs controller.
+  Therefore, hide Create/Edit/Delete Links in Index.cshtml of Coaches/Programs View to non Administrator users.
+  
 Both Client users and Administrator users can reach membership/ClientBooking/ScheduleManagements controllers Create method. Only Administrator users can reach Edit and Delete method.
 
 Administrator User Account:
