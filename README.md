@@ -24,10 +24,28 @@ Jasmine@nina.ca Password: Nina_890
 Bear@bear.ca   password: Nina_890
 
 
-
-![Table_Diagram](https://user-images.githubusercontent.com/82427284/163698655-fc028220-c5ae-448a-9e97-0f9cdb8a6203.png)
-![table_CoachInfo](https://user-images.githubusercontent.com/82427284/163698654-fa2b35cd-1d1f-459b-9c11-b99d64012720.png)
+![Table_Diagram](https://user-images.githubusercontent.com/82427284/163724671-bdc7d493-3176-4400-afec-a604b9dc024c.png)
+![table_CoachInfo](https://user-images.githubusercontent.com/82427284/163698654-fa2b35cd-1d1f-459b-9c11-b99d64012720.png) 
 ![table_MembershipInfo](https://user-images.githubusercontent.com/82427284/163698656-244a8a96-a9ed-4535-a682-aae3c015ebe8.png)
 ![table_ProgramInfo](https://user-images.githubusercontent.com/82427284/163698657-3ca60cf4-3c8e-4848-ae22-2e17ffe24eee.png)
 ![table_ScheduleManagement](https://user-images.githubusercontent.com/82427284/163698658-0d99cc1c-bf1f-4979-a528-695a8167e78d.png)
 ![table_Subscription](https://user-images.githubusercontent.com/82427284/163698659-2cfc810d-efef-42ec-b050-47a0a88f5312.png)
+
+
+![Home Page](https://user-images.githubusercontent.com/82427284/163724664-019baf1d-d248-4d98-9dd9-e8d038dc9e12.png)
+![About Us page](https://user-images.githubusercontent.com/82427284/163724660-f301c0bf-ffef-47e1-a5aa-77139c067c49.png)
+![Membership Index Page](https://user-images.githubusercontent.com/82427284/163724665-f09da40d-7c7c-4336-931e-d12fe5768914.png)
+![Program create Page](https://user-images.githubusercontent.com/82427284/163724666-ab017185-586d-4ba1-88b0-65c664ada3e4.png)
+![Client Booking Create Page](https://user-images.githubusercontent.com/82427284/163724662-e158012e-c208-4984-83eb-adcfbc784ec5.png)
+![Fitness Coach Info age](https://user-images.githubusercontent.com/82427284/163724663-6efc0262-87d7-4ab2-a0c8-e04f1eb8c562.png)
+![Schedule Management_Booked Progam Client_Page](https://user-images.githubusercontent.com/82427284/163724670-900d3de7-edf3-4cc4-ab56-3056c4078436.png)
+![Roles Delete Page](https://user-images.githubusercontent.com/82427284/163724668-6a2cf644-dfb1-401a-8396-162c23c8acfc.png)
+![Roles Index Page](https://user-images.githubusercontent.com/82427284/163724669-e870a870-55b4-4fba-b548-9bc21c5cbff9.png)
+
+
+
+
+ 
+
+
+
