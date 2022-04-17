@@ -6,6 +6,16 @@ Forced authentication & authorization, Roles= Administrator to Roles controller,
   Administrator users have the only authorization to create and edit/delete method in Coaches/Programs controller.
 Both Client users and Administrator users can reach membership/ClientBooking/ScheduleManagements controllers Create method. Only Administrator users can reach Edit and Delete method.
 
+Administrator User Account:
+Nina@Nina.ca  password: Nina_890
+Bear@bear.ca   password: Nina_890
+
+Client Users:
+Kevin@Kevin.ca Password: Nina_890
+
+no role user:
+Jasmine@nina.ca Password: Nina_890
+
 
 
 ![Table_Diagram](https://user-images.githubusercontent.com/82427284/163698655-fc028220-c5ae-448a-9e97-0f9cdb8a6203.png)
