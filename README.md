@@ -1,5 +1,5 @@
 # COMP2084ProjectNinaLiu200479031
-# Topic Fitness website
+# Topic -- Fitness website
 # Created 2 Roles: Administrator, Client
 # Anonymous users can view Home, About Us, Coach,  Program page 
 # Login Users can reach Create membership function to apply membership in Membership Controller, but can not Edit or Delete.
