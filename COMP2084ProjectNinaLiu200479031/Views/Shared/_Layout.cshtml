@@ -45,7 +45,14 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="FitnessScheduleManagements" asp-action="Index">ScheduleManagements</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Roles</a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                if (User.IsInRole("Administrator"))
+                                {
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Roles</a>
+                                }
+                            }
+
                         </li>
 
                     </ul>

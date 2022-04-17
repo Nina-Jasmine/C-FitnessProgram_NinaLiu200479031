@@ -11,9 +11,10 @@ namespace COMP2084ProjectNinaLiu200479031.Models
         public int ScheduleID { get; set; }
 
         [Required]
-        [Column(Order = 1, TypeName = "int")]
+        [Column(Order = 1, TypeName = "int")]     
         public int BookingID { get; set; }
         [ForeignKey("BookingID")]
+        [Display(Name = "Your Booked Program ID")]
         public FitnessClientBooking FitnessClientBooking { get; set; }
 
         [Required]

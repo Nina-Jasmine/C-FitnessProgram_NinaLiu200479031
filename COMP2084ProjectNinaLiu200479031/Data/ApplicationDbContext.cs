@@ -9,6 +9,8 @@ namespace COMP2084ProjectNinaLiu200479031.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
+        internal readonly object roleManager;
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

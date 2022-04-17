@@ -62,6 +62,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Client")]
         public async Task<IActionResult> Create([Bind("ScheduleID,BookingID,ScheduledTime,Hours,IsAttend")] FitnessScheduleManagement fitnessScheduleManagement)
         {
             if (ModelState.IsValid)
@@ -75,6 +76,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         }
 
         // GET: FitnessScheduleManagements/Edit/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -96,6 +98,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int id, [Bind("ScheduleID,BookingID,ScheduledTime,Hours,IsAttend")] FitnessScheduleManagement fitnessScheduleManagement)
         {
             if (id != fitnessScheduleManagement.ScheduleID)
@@ -128,6 +131,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         }
 
         // GET: FitnessScheduleManagements/Delete/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -149,6 +153,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         // POST: FitnessScheduleManagements/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var fitnessScheduleManagement = await _context.FitnessScheduleManagement.FindAsync(id);

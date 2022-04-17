@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace COMP2084ProjectNinaLiu200479031.Controllers
 {
-   
+    [Authorize]
     public class FitnessMembershipsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -22,7 +22,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         }
 
         // GET: FitnessMemberships
-        [Authorize]
+        
         public async Task<IActionResult> Index()
         {
             //Check the user role 
@@ -34,7 +34,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         
 
         // GET: FitnessMemberships/Details/5
-        [Authorize]
+       
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -53,7 +53,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         }
 
         // GET: FitnessMemberships/Create
-        [Authorize]
+
         
         public IActionResult Create()
         {
@@ -65,7 +65,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]       
+           
         public async Task<IActionResult> Create([Bind("MembershipID,FullName,Phone,Email,IsVIP,StartDate,LastFollowUp")] FitnessMembership fitnessMembership)
         {
             if (ModelState.IsValid)
@@ -152,6 +152,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         // POST: FitnessMemberships/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var fitnessMembership = await _context.FitnessMembership.FindAsync(id);

@@ -11,8 +11,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace COMP2084ProjectNinaLiu200479031.Controllers
 {
-   [Authorize]
-    [Authorize(Roles = "Administrator, Client")]
+    
+   
     public class FitnessClientBookingsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -23,7 +23,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         }
 
         // GET: FitnessClientBookings
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator, Client")]
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.FitnessClientBooking.Include(f => f.Membership).Include(f => f.Program);
@@ -31,6 +31,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         }
 
         // GET: FitnessClientBookings/Details/5
+        [Authorize(Roles = "Administrator, Client")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -64,6 +65,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Client")]
         public async Task<IActionResult> Create([Bind("BookingID,ProgramID,MembershipID,Notes,StartDate")] FitnessClientBooking fitnessClientBooking)
         {
             if (ModelState.IsValid)
@@ -78,7 +80,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         }
 
         // GET: FitnessClientBookings/Edit/5
-        [Authorize(Roles = "Administrator, Client")]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -101,7 +103,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Administrator, Client")]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int id, [Bind("BookingID,ProgramID,MembershipID,Notes,StartDate")] FitnessClientBooking fitnessClientBooking)
         {
             if (id != fitnessClientBooking.BookingID)
@@ -135,6 +137,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         }
 
         // GET: FitnessClientBookings/Delete/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -157,6 +160,7 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         // POST: FitnessClientBookings/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var fitnessClientBooking = await _context.FitnessClientBooking.FindAsync(id);

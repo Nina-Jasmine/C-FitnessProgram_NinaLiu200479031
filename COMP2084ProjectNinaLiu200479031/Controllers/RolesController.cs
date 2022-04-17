@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace COMP2084ProjectNinaLiu200479031.Controllers
 {
- 
+    [Authorize(Roles = "Administrator")]
     public class RolesController : Controller
     {
 
@@ -98,13 +98,15 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         }
 
         // GET: RolesController/Edit/5
-      /*  public ActionResult Edit(string id)
+       
+        public ActionResult Edit(string id)
         {
             return View();
-        }*/
-         public async Task<IActionResult> Edit(string? id)
+        }  
+        /* public async Task<IActionResult> Edit(string Id)
          {
-             if (id == null)
+
+            /*if (id == null)
              {
                  return NotFound();
              }
@@ -115,8 +117,13 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
                  return NotFound();
              }
 
-             return View(role);
-         } 
+             return View(role);*/
+          /* var role = await _context.Roles.FindAsync(Id);
+            return View();
+
+
+            //return RedirectToAction(nameof(Index));
+        }  */
 
         // POST: RolesController/Edit/5
         [HttpPost]
@@ -134,17 +141,18 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
         }
 
         // GET: RolesController/Delete/5
-        //public ActionResult Delete(string id)
-        //{
-        // return View();
-        //}
+         public ActionResult Delete(string id)
+         {
+          return View();
+         }
 
         // POST: RolesController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+      //  [HttpPost]
+       // [ValidateAntiForgeryToken]
+        /*
         public async Task<IActionResult> Delete(string Id)
         {
-
+            /*
             if (Id == null)
             {
                 return NotFound();
@@ -157,28 +165,28 @@ namespace COMP2084ProjectNinaLiu200479031.Controllers
                 return NotFound();
             }
 
-            return View(role);
+            return View(role);*/
 
-            /* try
-             {
-                 IdentityRole role = await roleManager.FindByIdAsync(Id);
+           
+            /*     IdentityRole role = await roleManager.FindByIdAsync(Id);
                  _ = roleManager.DeleteAsync(role);
 
                  return RedirectToAction(nameof(Index));
-             }
-             catch
-             {
-                 return View();
-             }*/
-        }
+              
+        }*/
        
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string Id)
         {
+            /*
             var role = await _context.Roles.FindAsync(Id);
             _context.Roles.Remove(role);
              await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));*/
+            IdentityRole role = await roleManager.FindByIdAsync(Id);
+            _ = roleManager.DeleteAsync(role);
+
             return RedirectToAction(nameof(Index));
         }
 
